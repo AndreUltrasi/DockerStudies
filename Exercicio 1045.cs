@@ -7,12 +7,10 @@ class URI
     {
         Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
 
-        string[] stringArray = Console.ReadLine().Split(' ');
+        string[] stringArray = Console.ReadLine()!.Split(' ');
 
         var listaNumeros = stringArray.Select(s => Convert.ToDouble(s));
         var listaNumeros1 = listaNumeros.OrderByDescending(s => s).ToList();
-
-        listaNumeros1 = listaNumeros1.Where(s => s < 10).ToList();
 
         var A = listaNumeros1[0];
         var B = listaNumeros1[1];
