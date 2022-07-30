@@ -11,11 +11,11 @@ class URI
         string[] stringArray = Console.ReadLine()!.Split(' ');
 
         var listaNumeros = stringArray.Select(s => Convert.ToDouble(s));
-        var listaNumeros1 = listaNumeros.OrderByDescending(s => s).ToList();
+        var listaNumerosOrdenados = listaNumeros.OrderByDescending(s => s).ToList();
 
-        var A = listaNumeros1[0];
-        var B = listaNumeros1[1];
-        var C = listaNumeros1[2];
+        var A = listaNumerosOrdenados[0];
+        var B = listaNumerosOrdenados[1];
+        var C = listaNumerosOrdenados[2];
 
         double soma = Math.Pow(B, 2) + Math.Pow(C, 2);
 
